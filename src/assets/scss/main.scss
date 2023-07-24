@@ -1,2 +1,12 @@
-@use "./partials/reset.scss";
-@use "./partials/variables.scss"
+@use "./partials/reset.scss" as *;
+@use "./partials/variables.scss" as *;
+
+main {
+    .jumbo-section {
+        background-color: $title-color-secondary;
+    }
+
+    .second-section, .third-section {
+        background-color:$background-color-sections;
+    }
+}
