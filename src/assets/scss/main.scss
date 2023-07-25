@@ -2,10 +2,6 @@
 @use "./partials/variables.scss" as *;
 
 main {
-    .jumbo-section {
-        background-color: $font-color-secondary;
-    }
-
     .second-section, .third-section {
         background-color: $background-color-sections;
     }

@@ -51,6 +51,7 @@ export default {
 		height: 700px;
 		text-align: center;
 		background-image: url(../../assets/img/home-3-hero-bg.jpg);
+        background-repeat: no-repeat;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -36,20 +36,28 @@ export default {
 
 					<div class="learn-about">
 
-						<p>EVERYTHING IN MAXCOACH</p>
+						<p>EVERYTHING IN <strong>MAXCOACH</strong></p>
 
-						<h2>Learn about our Work  Culture at Maxcoach</h2>
+						<h2>Learn about our <span>Work  Culture</span> at Maxcoach</h2>
 
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, excepturi.</p>
+						<p>
+							Spend some time to visit our website or head office and discover our current courses,
+							enorollment procedure, and registration deadline. We're opening new classes every beginning
+							of each month.
+						</p>
 
-						<p>Have questions? Get free guide</p>
+						<p>Have questions? <span>Get free guide &RightArrow;</span></p>
 
 					</div>
 
 					<div class="learn-about-image">
+						
+						<img class="img-under" src="../assets/img/maxcoach-shape-07-150x150.png" alt="">
 
-						IMAGE
+						<img class="img-principal" src="../assets/img/stock-full-hd-10-ohki1ayywq3cqutettrncduujpoaorifqu4relt2ts.jpg" alt="">
 
+						<img class="img-over" src="../assets/img/about-us-01-ohkia3qg98rq9vg3s0mn2hkflr1migdqdw370qnegc.jpg" alt="">
+						
 					</div>
 
 				</div>
@@ -64,21 +72,21 @@ export default {
 
 						<div class="enrolleds">
 
-							<p>129+</p>
+							<h4>129+</h4>
 							<p>ENROLLLED LEARNS</p>
 							
 						</div>
 
 						<div class="sessions">
 
-							<p>80</p>
+							<h4>80</h4>
 							<p>FINISHED SESSIONS</p>
 
 						</div>
 
 						<div class="satisfaction-rate">
 
-							<p>4%</p>
+							<h4>4%</h4>
 							<p>SATISFACTION RATE</p>
 
 						</div>
@@ -133,24 +141,83 @@ export default {
 		padding: 0;
 	}
 	.container-small {
-		max-width: 800px;
+		max-width: 600px;
 		margin: 0 auto;
 		padding: 0;
 	}
 	.second-section {
-		padding-top: 40px;
+		padding-top: 140px;
 		.second-section-main {
 			display: flex;
 			justify-content: space-between;
+
+			.learn-about {
+				width: 40%;
+				& p:first-of-type {
+					font-size: 0.8rem;
+					color: rgb(133, 133, 133);
+				}
+				& p:nth-of-type(2) {
+					font-size: 0.8rem;
+					color: rgb(133, 133, 133);
+					padding-right: 10px;
+					text-align: justify;
+				}
+				& p:nth-of-type(3) {
+					font-size: 0.8rem;
+					color: rgb(133, 133, 133);
+					margin-top: 10px;
+
+					span {
+						color: $background-button;
+						text-decoration: underline;
+						cursor: pointer;
+					}
+				}
+
+				h2 {
+					font-size: 2.9rem;
+					font-weight: 400;
+					margin-top: 20px;
+
+					span {
+						color: $background-button;
+					}
+				}
+			}
+			.learn-about-image {
+				width: 60%;
+				position: relative;
+				margin-left: 95px;
+				.img-principal {
+					z-index: 2;
+				}
+				.img-over {
+					position: absolute;
+					top: -81px;
+					right: -86px;
+					border-radius: 5px;
+					z-index: 3;
+				}
+				.img-under {
+					position: absolute;
+					top: -41px;
+					right: 62px;
+					z-index: 1;
+					clip-path: inset(0 0 70% 0);
+				}
+			}
 		}
 		.score-recap {
 			display: flex;
 			justify-content: space-between;
 			margin-top: 20px;
+			text-align: center;
 
-			.enrolleds, .sessions, 
-			.satisfaction-rate p {
-				text-align: center;
+			h4 {
+				font-size: 1.5rem;
+				color: $background-button;
+				margin-top: 20px;
 			}
 		}
 	}
