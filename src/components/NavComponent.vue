@@ -121,7 +121,7 @@ export default {
                 padding-left: 16px;
                 padding-top: 20px;
                 padding-bottom: 20px;
-                border-bottom: 3px solid $background-button;
+                border-bottom: 4px solid $background-button;
 
                 ul {
                     display: flex;

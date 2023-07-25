@@ -1,9 +1,10 @@
 <script>
+import JumboComponent from '../components/sections/JumboComponent.vue';
 
 export default {
 	name: "MainComponent",
 	components: {
-
+		JumboComponent
 	},
 	data() {
 		return {
@@ -23,11 +24,7 @@ export default {
 
 		<div class="jumbo-section">
 
-			<h3>Commence Business</h3>
-
-			<h1>Distant Mentoring Program</h1>
-
-			<button>Download free guidebook ++></button>
+			<JumboComponent />
 
 		</div>
 		
@@ -129,9 +126,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-	.jumbo-section {
-		text-align: center;
-	}
+	@use "../assets/scss/partials/variables.scss" as *;
 	.container-medium {
 		max-width: 1000px;
 		margin: 0 auto;
@@ -166,4 +161,5 @@ export default {
 			justify-content: space-between;
 		}
 	}
+	
 </style>
