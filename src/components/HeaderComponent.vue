@@ -1,8 +1,10 @@
 <script>
+import NavComponent from '../components/NavComponent.vue';
+
 export default {
 	name: "HeaderComponent",
 	components: {
-
+		NavComponent
 	},
 	data() {
 		return {
@@ -23,26 +25,9 @@ export default {
 		<div class="nav-row">
 
 			<div class="nav-menu">
-				<ul>
-					<li>
-						<a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
-					</li>
-					<li>
-						<a href="#">Pages <i class="fa-solid fa-angle-down"></i></a>
-					</li>
-					<li>
-						<a href="#">Courses <i class="fa-solid fa-angle-down"></i></a>
-					</li>
-					<li>
-						<a href="#">Features <i class="fa-solid fa-angle-down"></i></a>
-					</li>
-					<li>
-						<a href="#">Blog <i class="fa-solid fa-angle-down"></i></a>
-					</li>
-					<li>
-						<a href="#">Shop <i class="fa-solid fa-angle-down"></i></a>
-					</li>
-				</ul>
+
+				<NavComponent />
+
 			</div>
 
 			<div class="nav-logo">
@@ -50,7 +35,22 @@ export default {
 			</div>
 
 			<div class="nav-search">
-				SEARCH BUTTON
+
+				<div class="search-contain">
+
+					<i class="fa-solid fa-cart-shopping"></i>
+					<i class="fa-regular fa-circle-user"></i>
+
+					<div class="input-section">
+
+						<input type="text" placeholder="Search...">
+
+						<i class="fa-solid fa-magnifying-glass"></i>
+
+					</div>
+
+				</div>
+
 			</div>
 
 		</div>
@@ -60,41 +60,60 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+	@use "../assets/scss/partials/variables.scss" as *;
 	.nav-row {
 	display: flex;
 	justify-content: space-between;
-	padding: 40px;
-	}
+	padding: 20px;
+	align-items: center;
 
-	ul {
-		display: flex;
-		list-style-type: none;
-
-		li {
-			
-			a {
-				text-decoration: none;
-				color: black;
-				padding-right: 30px;
-				font-size: 1rem;
-			}
-		}
 	}
 	.nav-menu {
-		width: 40%;
+		width: 45%;
+		padding-left: 50px;
+		position: relative;
 	}
 	.nav-logo {
-		width: 20%;
+		width: 10%;
 		text-align: center;
 
 		img {
-			width: 130px;
+			width: 150px;
 			margin-left: 10px;
 		}
 	}
 	.nav-search {
-		width: 40%;
-		text-align: right;
+		width: 45%;
+		padding-right: 50px;
+		.search-contain {
+			display: flex;
+			justify-content: end;
+			align-items: center;
+
+			& i {
+				margin-right: 20px;
+			}
+			.input-section {
+				padding: 10px;
+				position: relative;
+				
+				
+				& i {
+					position: absolute;
+					top: 22px;
+					right: 5px;
+					color: $background-button;
+				}
+
+				input {
+					padding: 10px;
+					background-color: rgb(237, 237, 237);
+					border: none;
+					border-radius: 5px;
+				}
+			}
+		}
+
 	}
 
 </style>
