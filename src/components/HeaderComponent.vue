@@ -38,7 +38,12 @@ export default {
 
 				<div class="search-contain">
 
-					<i class="fa-solid fa-cart-shopping"></i>
+					<i class="fa-solid fa-cart-shopping cart-icon">
+						<span>
+							0
+						</span>
+					</i>
+					
 					<i class="fa-regular fa-circle-user"></i>
 
 					<div class="input-section">
@@ -91,17 +96,17 @@ export default {
 			align-items: center;
 
 			& i {
-				margin-right: 20px;
+				margin-right: 30px;
+				font-size: larger;
 			}
 			.input-section {
-				padding: 10px;
 				position: relative;
-				
-				
+				font-size: large;
+
 				& i {
 					position: absolute;
-					top: 22px;
-					right: 5px;
+					top: 10px;
+					right: -19px;
 					color: $background-button;
 				}
 
@@ -110,6 +115,22 @@ export default {
 					background-color: rgb(237, 237, 237);
 					border: none;
 					border-radius: 5px;
+				}
+			}
+			.cart-icon {
+				position: relative;
+				span {
+					position: absolute;
+					top: -11px;
+					font-size: small;
+					background-color: $background-button;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					padding: 5px;
+					color: white;
+					line-height: 10px;
+					text-align: center;
 				}
 			}
 		}
