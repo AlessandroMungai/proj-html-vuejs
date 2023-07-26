@@ -1,5 +1,4 @@
 <script>
-import imgOne from "../../assets/img/course-02-480x298.jpg"
 
 import {Swiper, SwiperSlide} from 'swiper/vue'
 import {Autoplay, Pagination} from 'swiper/modules'
@@ -15,37 +14,48 @@ export default {
         Swiper,
         SwiperSlide
     },
+    created() {
+        console.log(this.getImagePath())
+    },
     setup() {
         const swiperTextBase = ref( [
+
             {
-                imgOne,
+                img: 'img/course-02-480x298.jpg',
                 price: '$40.00',
                 description: 'Learning to Write as a Professional Author',
-                numberLessons: '20',
-                students: '50'
+                numberLessons: '20 lessons',
+                students: '50 students'
             },
             {
-                imgOne,
-                price: '$40.00',
-                description: 'ciao ciao ciao',
-                numberLessons: '20',
-                students: '50'
+                img: 'img/stock-full-hd-03-480x298.jpg',
+                price: '$0.00',
+                description: 'Customer-Centric Info-Tech Strategies',
+                numberLessons: '24 lessons',
+                students: '769 students'
             },
             {
-                imgOne,
-                price: '$40.00',
-                description: 'ciao ciao ciao',
-                numberLessons: '20',
-                students: '50'
+                img: 'img/stock-full-hd-04-480x298.jpg',
+                price: '$19.00',
+                description: 'Open programming Courses for Everyone: Python',
+                numberLessons: '17 lessons',
+                students: '62 students'
             },
 
         ]);
         return {modules: [Pagination, Autoplay], swiperTextBase}
+    },
+    methods: {
+        getImagePath: function(img) {
+            return new URL(`../../assets/${img}`, import.meta.url).href;
+        }
     }
+
 }
 </script>
 
 <template>
+
     <div class="title-fourth-section">
 
         <p>
@@ -75,12 +85,19 @@ export default {
                     <swiper-slide v-for="text in swiperTextBase" :key="text.description">
 
                         <div class="card">
-                            <img :src="text.imgOne" alt="image">
+                            <img :src="getImagePath(text.img)" alt="image">
 
                             <div class="text-card">
-                                <h1>{{ text.author }}</h1>
-                                <p>{{ text.description }}</p>
+                                <h2>{{ text.description }}</h2>
                                 <p>{{ text.price }}</p>
+                                <p> 
+                                    <i class="fa-regular fa-file-lines"></i>
+                                    {{ text.numberLessons }}
+                                </p>
+                                <p>
+                                    <i class="fa-regular fa-user"></i>
+                                    {{ text.students }}
+                                </p>
                             </div>
 
                         </div>
@@ -88,9 +105,28 @@ export default {
                     </swiper-slide>
 
                 </swiper>
+
             </div>
+
         </div>
+
     </div>
+
+    <div class="under-carousel">
+
+        <p>
+            Control your personal preference settings to get notified about
+        </p>
+
+        <p>
+            appropriate courses. 
+            <span>
+                View all courses &RightArrow;
+            </span>
+        </p>
+
+    </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -102,16 +138,45 @@ export default {
 	}
 
     .carousel-contain {
-        padding-top: 80px;
+        margin-top: 60px;
+        transition: all 0.8s ease-in-out;
+
+        &:hover {
+        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, -50px -50px 0px -30px rgba(0,0,0,0); 
+        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, -50px -50px 0px -30px rgba(0,0,0,0);
+
+        }
+        border-radius: 5px;
         img {
-            width: 500px;
             border-radius: 5px;
         }
         .card {
             display: flex;
             .text-card {
-                text-align: right;
-                padding-left: 214px;
+                text-align: center;
+                // padding-left: 214px;
+
+                h2 {
+                    font-size: 1.9rem;
+                }
+
+                & p:first-of-type {
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    color: $background-button;
+                    margin-top: 20px;
+                }
+
+                & p:nth-of-type(2), p:nth-of-type(3) {
+                    font-size: 0.9rem;;
+                    color: rgb(133, 133, 133);
+                    margin-top: 20px;
+
+                    i {
+                        font-size: 0.9rem;
+                        margin-right: 5px;
+                    }
+                }
             }
         }
     }
@@ -130,6 +195,21 @@ export default {
             span {
                 color: $background-button;
             }
+        }
+    }
+
+    .under-carousel {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 20px;
+
+        & p {
+            color: rgb(133, 133, 133);
+        }
+
+        span {
+            font-weight: bold;
+            color: black;
         }
     }
 </style>

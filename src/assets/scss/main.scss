@@ -2,7 +2,9 @@
 @use "./partials/variables.scss" as *;
 
 main {
-    .second-section, .third-section {
+    .second-section, .third-section
+    , .fourth-section
+    {
         background-color: $background-color-sections;
     }
 }
