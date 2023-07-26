@@ -88,7 +88,7 @@ export default {
 			text-align: center;
 
 			img {
-				width: 150px;
+				width: 130px;
 				margin-left: 10px;
 			}
 		}

@@ -57,6 +57,8 @@ export default {
 						<img class="img-principal" src="../assets/img/stock-full-hd-10-ohki1ayywq3cqutettrncduujpoaorifqu4relt2ts.jpg" alt="">
 
 						<img class="img-over" src="../assets/img/about-us-01-ohkia3qg98rq9vg3s0mn2hkflr1migdqdw370qnegc.jpg" alt="">
+					
+						<img class="img-over-2" src="../assets/img/maxcoach-shape-02.png" alt="">
 						
 					</div>
 
@@ -199,6 +201,14 @@ export default {
 					border-radius: 5px;
 					z-index: 3;
 				}
+				.img-over-2 {
+					width: 120px;
+					position: absolute;
+					top: 314px;
+					right: 48px;
+					border-radius: 5px;
+					z-index: 3;
+				}
 				.img-under {
 					position: absolute;
 					top: -41px;
@@ -215,9 +225,13 @@ export default {
 			text-align: center;
 
 			h4 {
-				font-size: 1.5rem;
+				font-size: 1.6rem;
 				color: $background-button;
-				margin-top: 20px;
+				margin-top: 60px;
+			}
+
+			p {
+				font-size: 0.8rem;
 			}
 		}
 	}
