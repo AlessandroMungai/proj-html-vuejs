@@ -24,7 +24,9 @@ export default {
 
         <div class="learn-about">
 
-            <p>EVERYTHING IN <strong>MAXCOACH</strong></p>
+            <p>
+                EVERYTHING IN <strong>MAXCOACH</strong>
+            </p>
 
             <h2>Learn about our <span>Work  Culture</span> at Maxcoach</h2>
 

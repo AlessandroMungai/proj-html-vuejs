@@ -3,7 +3,8 @@ import JumboComponent from '../components/sections/JumboComponent.vue';
 import SecondSection from '../components/sections/SecondSection.vue';
 import ThirdSection from '../components/sections/ThirdSection.vue';
 import FourthSection from '../components/sections/FourthSection.vue';
-import FifthComponent from '../components/sections/FifthComponent.vue';
+import FifthSection from '../components/sections/FifthSection.vue';
+import SixthSection from '../components/sections/SixthSection.vue';
 
 export default {
 	name: "MainComponent",
@@ -12,7 +13,8 @@ export default {
 		SecondSection,
 		ThirdSection,
 		FourthSection,
-		FifthComponent
+		FifthSection,
+		SixthSection
 	},
 	data() {
 		return {
@@ -56,10 +58,16 @@ export default {
 
 		<div class="fifth-section">
 
-			<FifthComponent />
+			<FifthSection />
 
 		</div>
 
+		<div class="sixth-section">
+
+			<SixthSection />
+
+		</div>
+		
     </main>
 
 </template>
@@ -78,5 +86,8 @@ export default {
 	}
 	.fifth-section {
 		margin-top: 100px;
+	}
+	.sixth-section {
+		margin-top: 150px;
 	}
 </style>
