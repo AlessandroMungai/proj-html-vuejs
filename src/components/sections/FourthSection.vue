@@ -69,8 +69,11 @@ export default {
     </div>
 
     <div class="container-medium">
+
         <div class="carousel-contain">
+
             <div class="col-carousel">
+
                 <swiper
                     :modules="modules"
                     :space-between="20"
@@ -154,7 +157,7 @@ export default {
             display: flex;
             .text-card {
                 text-align: center;
-                // padding-left: 214px;
+                padding-top: 20px;
 
                 h2 {
                     font-size: 1.9rem;
