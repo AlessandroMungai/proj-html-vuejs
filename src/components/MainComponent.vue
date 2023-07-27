@@ -5,6 +5,7 @@ import ThirdSection from '../components/sections/ThirdSection.vue';
 import FourthSection from '../components/sections/FourthSection.vue';
 import FifthSection from '../components/sections/FifthSection.vue';
 import SixthSection from '../components/sections/SixthSection.vue';
+import SeventhSection from '../components/sections/SeventhSection.vue';
 
 export default {
 	name: "MainComponent",
@@ -14,7 +15,8 @@ export default {
 		ThirdSection,
 		FourthSection,
 		FifthSection,
-		SixthSection
+		SixthSection,
+		SeventhSection
 	},
 	data() {
 		return {
@@ -67,6 +69,12 @@ export default {
 			<SixthSection />
 
 		</div>
+
+		<div class="seventh-section">
+
+			<SeventhSection />
+
+		</div>
 		
     </main>
 
@@ -89,5 +97,8 @@ export default {
 	}
 	.sixth-section {
 		margin-top: 150px;
+	}
+	.seventh-section {
+		margin-top: 75px;
 	}
 </style>
