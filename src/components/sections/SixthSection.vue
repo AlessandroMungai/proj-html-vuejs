@@ -56,76 +56,76 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../../assets/scss/partials/variables.scss" as *;
-    .container-medium {
-		max-width: 1000px;
-		margin: 0 auto;
-		padding: 0;
-	}
-    .third-section-row {
-        display: flex;
-        justify-content: space-between;
-        .video-col {
-            width: 60%;
-            position: relative;
-            .testimonial {
-                position: absolute;
-                top: -77px;
-                left: -8px;
-                width: 437px;
-                z-index: 2;
-            }
-            .decoration-over {
-                position: absolute;
-                top: 15px;
-                left: -52px;
-                z-index: 1;
-            }
+    @use "../../assets/scss/partials/variables.scss" as *;
+        .container-medium {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0;
         }
-        .text-col {
-            width: 40%;
-            margin-left: 110px;
-
-            & p:first-of-type {
-            font-size: 0.8rem;
-            color: rgb(133, 133, 133);
-            }
-
-            & p:nth-of-type(2) {
-            font-size: 0.8rem;
-            color: rgb(133, 133, 133);
-            padding-right: 10px;
-            text-align: justify;
-            margin-top: 10px;
-            }
-
-            & p:nth-of-type(3) {
-            font-size: 0.8rem;
-            color: black;
-            margin-top: 10px;
-            font-weight: bold;
-            }
-
-            h2 {
-            font-size: 2.9rem;
-            font-weight: 400;
-            margin-top: 20px;
-
-                span {
-                    color: $background-button;
+        .third-section-row {
+            display: flex;
+            justify-content: space-between;
+            .video-col {
+                width: 60%;
+                position: relative;
+                .testimonial {
+                    position: absolute;
+                    top: -77px;
+                    left: -8px;
+                    width: 437px;
+                    z-index: 2;
+                }
+                .decoration-over {
+                    position: absolute;
+                    top: 15px;
+                    left: -52px;
+                    z-index: 1;
                 }
             }
+            .text-col {
+                width: 40%;
+                margin-left: 110px;
 
-            button {
-				margin-top: 30px;
-				border: none;
-				background-color: $background-button;
-				color: white;
-				padding: 15px 25px;
-				border-radius: 5px;
-				font-weight: bold;
-                cursor: pointer;
-			}
+                & p:first-of-type {
+                font-size: 0.8rem;
+                color: rgb(133, 133, 133);
+                }
+
+                & p:nth-of-type(2) {
+                font-size: 0.8rem;
+                color: rgb(133, 133, 133);
+                padding-right: 10px;
+                text-align: justify;
+                margin-top: 10px;
+                }
+
+                & p:nth-of-type(3) {
+                font-size: 0.8rem;
+                color: black;
+                margin-top: 10px;
+                font-weight: bold;
+                }
+
+                h2 {
+                font-size: 2.9rem;
+                font-weight: 400;
+                margin-top: 20px;
+
+                    span {
+                        color: $background-button;
+                    }
+                }
+
+                button {
+                    margin-top: 30px;
+                    border: none;
+                    background-color: $background-button;
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
         }
-    }
 </style>

@@ -36,7 +36,7 @@ export default {
   
     <main>
 
-		<div class="jumbo-section">
+		<div id="jump-to" class="jumbo-section">
 
 			<JumboComponent />
 

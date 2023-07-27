@@ -139,7 +139,6 @@ export default {
 		margin: 0 auto;
 		padding: 0;
 	}
-
     .carousel-contain {
         margin-top: 60px;
         transition: all 0.8s ease-in-out;
