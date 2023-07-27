@@ -27,9 +27,8 @@ export default {
 	},
 	methods: {
 	
-		}
-
-}
+	}
+};
 </script>
 
 <template>
@@ -60,7 +59,7 @@ export default {
 
 		</div>
 
-		<div class="fifth-section">
+		<div class="fifth-section wave-bottom">
 
 			<FifthSection />
 
@@ -101,7 +100,7 @@ export default {
 		padding-top: 100px;
 	}
 	.fifth-section {
-		margin-top: 100px;
+		margin-top: -1px;
 	}
 	.sixth-section {
 		margin-top: 150px;
@@ -111,5 +110,13 @@ export default {
 	}
 	.eighth-section {
 		margin-top: 50px;
+	}
+	.wave-bottom::before {
+		content: "";
+		display: block;
+		height: 100px;
+		background-image: url('../assets/img/wave colored-01.svg');
+		transform: rotateX(180deg);
+		background-size: cover;
 	}
 </style>

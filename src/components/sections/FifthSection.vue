@@ -64,6 +64,7 @@ export default {
     .fifth-section-contain {
         display: flex;
         justify-content: space-between;
+        margin-top: 40px;
 
         .testimonial-about {
             width: 40%;

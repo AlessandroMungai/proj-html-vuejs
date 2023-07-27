@@ -11,9 +11,8 @@ export default {
 	},
 	methods: {
 	
-		}
-
-}
+	}
+};
 </script>
 
 <template>
@@ -28,6 +27,7 @@ export default {
             Enter your mail address to register to our newsletter subscription
             delivered on a regular basis!
         </p>
+        
         <div class="input-section">
 
             <input type="text" placeholder="Enter your email">

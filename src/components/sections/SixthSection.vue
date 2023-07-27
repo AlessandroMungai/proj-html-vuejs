@@ -26,6 +26,7 @@ export default {
                 
                 <img class="testimonial" src="../../assets/img/home-3-team-image.png" alt="">
                 <img class="decoration-over" src="../../assets/img/maxcoach-shape-05-150x150.png" alt="">
+                <img class="decoration-over-2" src="../../assets/img/maxcoach-shape-07-150x150.png" alt="">
 
             </div>
 
@@ -80,6 +81,13 @@ export default {
                     top: 15px;
                     left: -52px;
                     z-index: 1;
+                }
+                .decoration-over-2 {
+                    position: absolute;
+                    top: 118px;
+                    left: 289px;
+                    z-index: 1;
+                    width: 132px;
                 }
             }
             .text-col {

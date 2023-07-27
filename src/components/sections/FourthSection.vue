@@ -29,7 +29,7 @@ export default {
             },
             {
                 img: 'img/stock-full-hd-03-480x298.jpg',
-                price: '$0.00',
+                price: '$0.00 FREE!',
                 description: 'Customer-Centric Info-Tech Strategies',
                 numberLessons: '24 lessons',
                 students: '769 students'
@@ -92,6 +92,7 @@ export default {
 
                             <div class="text-card">
                                 <h2>{{ text.description }}</h2>
+                                <div class="bordo"></div>
                                 <p>{{ text.price }}</p>
                                 <p> 
                                     <i class="fa-regular fa-file-lines"></i>
@@ -157,6 +158,14 @@ export default {
             .text-card {
                 text-align: center;
                 padding-top: 20px;
+
+                .bordo {
+                    border: 2px solid $font-color-secondary;
+                    width: 200px;
+                    margin-left: 160px;
+                    margin-top: 20px;
+                    border-radius: 10px;
+                }
 
                 h2 {
                     font-size: 1.9rem;

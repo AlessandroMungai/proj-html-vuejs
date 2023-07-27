@@ -110,8 +110,9 @@ export default {
 
 					& i {
 						position: absolute;
-						top: 10px;
+						top: 11px;
 						right: -19px;
+						font-size: 15px;
 						color: $background-button;
 					}
 
